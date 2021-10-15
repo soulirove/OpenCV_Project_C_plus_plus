@@ -15,8 +15,8 @@ void main() {
 	string path = "\Resources/paper.jpg";
 	Mat img = imread(path);
 
-	Point2f input[] = { {492,303},{791,351},{282,490},{610,566} };
-	Point2f output[] = { {0.0f,0.0f},{width,0.0f},{0.0f,hight},{width,hight} };
+	Point2f input[4] = { {492,303},{791,351},{282,490},{610,566} };
+	Point2f output[4] = { {0.0f,0.0f},{width,0.0f},{0.0f,hight},{width,hight} };
 
 	matrix = getPerspectiveTransform(input, output);
 	warpPerspective(img, warp, matrix, Point(width, hight));
